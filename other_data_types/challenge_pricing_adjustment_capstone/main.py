@@ -18,11 +18,18 @@ print("Price of Eggs is:", eggs_price)
 eggs_price = grocery_inventory["Eggs"][1]
 print(eggs_price)
 
-if "Eggs" in grocery_inventory and eggs_price > 5:
-    print( "Eggs are too expensive, reducing the price by $1.")
+if eggs_price > 5:
+    print("Eggs are too expensive, reducing the price by $1.")
     new_eggs_price = eggs_price - 1
+    # SINCE TUPLES ARE NOT MUTABLE, WE NEED TO REPLACE THE OLD TUPLE WITH AN UPDATED ONE (HERE WE ARE CHANGING THE PRICE ONLY, THE REST OF THE VALUES REMAIN THE SAME)
+    grocery_inventory["Eggs"] = (
+        grocery_inventory["Eggs"][0],    # category
+        new_eggs_price,                  # updated price
+        grocery_inventory["Eggs"][2],    # stock
+    )
 else:
     print("The price of Eggs is reasonable.")
+
 
 # 3. Add a New Item
 grocery_inventory.update({"Tomatoes": ("Produce", 1.20, 30)})
