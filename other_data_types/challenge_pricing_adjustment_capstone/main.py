@@ -42,6 +42,23 @@ if stock_of_milk < 10:
 else:
     print("Milk has sufficient stock.")
 
+# ANOTHER way to do the same ===
+
+# instead of dozens of lines just for "Milk",
+# loop over a one-element list and unpack directly:
+for item in ["Milk"]:
+    category, price, stock = grocery_inventory[item]
+    if stock < 10:
+        print(f"{item} needs to be restocked. Increasing stock by 20 units.")
+        grocery_inventory[item] = (category, price, stock + 20)
+    else:
+        print(f"{item} has sufficient stock.")
+
+"""
+1. Loops over whatever items you want to check (here, just "Milk").
+2. Unpacks (category, price, stock) in one go.
+3. Updates the dictionary in a single assignment."""'
+
 
 # Remove Item Based on Price
 
