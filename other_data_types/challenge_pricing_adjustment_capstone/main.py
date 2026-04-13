@@ -57,7 +57,7 @@ for item in ["Milk"]:
 """
 1. Loops over whatever items you want to check (here, just "Milk").
 2. Unpacks (category, price, stock) in one go.
-3. Updates the dictionary in a single assignment."""'
+3. Updates the dictionary in a single assignment."""
 
 
 # 5. Remove Item Based on Price
