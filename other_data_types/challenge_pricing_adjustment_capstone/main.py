@@ -60,11 +60,12 @@ for item in ["Milk"]:
 3. Updates the dictionary in a single assignment."""'
 
 
-# Remove Item Based on Price
+# 5. Remove Item Based on Price
 
 apple_price = grocery_inventory["Apples"][1]
 if apple_price > 2:
     grocery_inventory.pop("Apples")
     print("Apples removed from inventory due to high price.")
 
+# 6. Final Print
 print("Updated inventory:", grocery_inventory)
